@@ -1,0 +1,14 @@
+n=int(input())
+r=1
+i=2
+while(i<=(n//2)):
+    if(n%i==0):
+        r+=i
+        if(r>n):
+            print("not perfect")
+            break    
+    i+=1
+if(r==n):
+    print("perfect")
+else:
+    print("not perfect")
