@@ -1,3 +1,4 @@
+#Happy number
 n=int(input())
 r=1
 i=2
@@ -12,3 +13,56 @@ if(r==n):
     print("perfect")
 else:
     print("not perfect")
+
+# Happy number
+from math import *
+def perfect(num):
+    r=1
+    i=2
+    range=int(sqrt(num))
+    while(i<=range):
+        if(num%i==0):
+            r+=i
+            r+=(num//i)
+        i+=1
+    return r==num
+t=int(input())
+for i in range(t):
+    n=int(input())
+    print(perfect(n))
+
+#Spy number
+def spy(n):
+    r=0
+    sum=0
+    pr=1
+    while(n>0):
+        r=n%10
+        sum+=r
+        pr*=r
+        n=n//10
+    return sum==pr
+n=int(input())
+print(spy(n))
+
+#Semi-Prime Number
+from math import *
+def semiprime(n):
+    ran=sqrt(n)
+    i=2
+    while(i<=ran):
+        c=0
+        if(n%i==0):
+            for j in range(2,i):
+                if(i%j==0):
+                    c=1
+            if(c==0):
+                for k in range(2,n//i):
+                    if((n//i)%k==0):
+                        c=1
+            if(c==0):
+                return True
+        i+=1
+    return False
+n=int(input())
+print(semiprime(n))
