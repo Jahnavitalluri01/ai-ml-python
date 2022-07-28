@@ -66,3 +66,18 @@ def semiprime(n):
     return False
 n=int(input())
 print(semiprime(n))
+
+#multiplication of two numbers
+def mul(a,b):        
+    summ=0
+    while(a>0):
+        if(a%2!=0):
+            summ+=b
+        a=a//2
+        b=b*2
+    return summ
+                 
+a,b=map(int,input().split())
+r=mul(a,b)
+print(r)
+
