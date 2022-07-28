@@ -1,0 +1,19 @@
+#SUM OF FACTORS OF NUMBER
+def sumfac(n):
+    global i
+    i+=1
+    if(i>sq):
+        return 0
+    if(n%i==0):
+        if(i==n//i):
+            return n//i+sumfac(n)
+        return (i+(n//i))+sumfac(n)
+    else:
+        return sumfac(n)
+    
+import math 
+n=int(input())
+sq=int(math.sqrt(n))
+i=0
+r=sumfac(n)
+print(r)
