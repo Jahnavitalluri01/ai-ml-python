@@ -1,0 +1,10 @@
+def gcd(a,b):
+    while(b>0):
+        if(a>b):
+            a,b=b,a
+        b=b%a
+    return a    
+        
+a,b=map(int,input().split())
+x=gcd(a,b)
+print(x)
